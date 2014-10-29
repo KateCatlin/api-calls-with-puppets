@@ -135,8 +135,8 @@ public class Main extends Activity {
                 }
                 try {
                     Log.d(LOG_TAG, "Ok so it's making it to the last line...");
-                    String[] hold = parsePostingFromJsonString(etsyJsonString);
-                    return hold;
+                    String[] theInfoYouWanted = parsePostingFromJsonString(etsyJsonString);
+                    return theInfoYouWanted;
 
                 } catch (JSONException e) {
                     return null;
