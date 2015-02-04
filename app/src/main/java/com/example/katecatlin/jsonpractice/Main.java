@@ -77,7 +77,7 @@ public class Main extends Activity {
             protected String[] doInBackground(Void... params) {
 
                 //We only need to put two pieces together in this example, but in real coding you may have many more.
-                //If there are lots of parameters in your search, you'll have to adjust the string below and add even more. 
+                //If there are lots of parameters in your search, you'll have to adjust the string below and add even more.
                 final String URL_BASE = "https://openapi.etsy.com/v2/listings/active?api_key=";
                 final String API_KEY = "8yuclbhlmoijgd6jld92l6t4";
 
