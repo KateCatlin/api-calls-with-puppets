@@ -15,10 +15,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -105,7 +103,12 @@ public class Main extends Activity {
 
                     //Read the bytes and add them to a special String type called "StringBuilder" one by one.
                     int bytesRead;
+
+                    //You could also use Stringbuffer for this, but StringBuilder is faster.
                     StringBuilder stringBuilder = new StringBuilder();
+
+                    //BufferedInputStream.read translates the bytes into a number between - = 255, which is why if the
+                    //number returned is -1 we know to stop reading because the bytes are over.
                     while ((bytesRead = bufferedInputStream.read()) != -1) {
                         stringBuilder.append((char)bytesRead);
                     }
